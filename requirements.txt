@@ -4,7 +4,7 @@ tqdm==4.60.0
 Keras==2.3.0
 emoji==1.2.0
 tweet_preprocessor==0.6.0
-tokenizers==0.10.2
+tokenizers==0.9.4
 pandas==1.2.4
 requests==2.25.1
 transformers==4.2.2
