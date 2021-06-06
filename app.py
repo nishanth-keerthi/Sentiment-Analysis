@@ -34,7 +34,8 @@ def predict():
     #result = json.dumps(result)
 
     # send back to browser
-    output = result
+    temp = sorted(result.items(), key=lambda item: item[1], reverse=True)
+    result = dict(temp[0:3])
 
     # return data
     #return data
