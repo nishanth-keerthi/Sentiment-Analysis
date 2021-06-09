@@ -47,7 +47,7 @@ def predict():
     return jsonify(final)
 
 @app.route('/predict/all', methods=['POST'])
-def predict():
+def predictall():
     # get data
     data = request.get_json(force=True)
     #print('Data received: "{data}"'.format(data=data))
