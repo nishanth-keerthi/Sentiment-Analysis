@@ -39,16 +39,16 @@ def predict():
 @app.route('/predictall', methods=['POST'])
 def predictall():
     # get data
-    data = request.get_json(force=True)
+    data1 = request.get_json(force=True)
     #print('Data received: "{data}"'.format(data=data))
     # data=json.dumps(d)
-    data = data["text"]
+    data1 = data1["text"]
 
     # predictions
-    result = cd.get_sentiment(model, data)
+    result1 = cd.get_sentiment(model, data1)
 
     #return data
-    return jsonify(result)
+    return jsonify(result1)
 
 if __name__ == '__main__':
    app.run(debug=true)
