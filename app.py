@@ -35,5 +35,20 @@ def predict():
     # return data
     #return data
     return jsonify(result)
+
+@app.route('/predictall', methods=['POST'])
+def predictall():
+    # get data
+    data = request.get_json(force=True)
+    #print('Data received: "{data}"'.format(data=data))
+    # data=json.dumps(d)
+    data = data["text"]
+
+    # predictions
+    result = cd.get_sentiment(model, data)
+
+    #return data
+    return jsonify(result)
+
 if __name__ == '__main__':
    app.run(debug=true)
